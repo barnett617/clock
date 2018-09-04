@@ -3,6 +3,18 @@ A countdown clock
 
 心血来潮，想做一个苹果发布会的倒计时
 
+## 访问地址
+
+https://frontend.wang
+
+## 备用地址
+
+https://barnett617.github.io/apple_time
+
+## Fork me on github
+
+https://github.com/barnett617/apple_time
+
 ## 前言
 
 本网站基于github pages服务进行展示
@@ -87,7 +99,7 @@ background-image:linear-gradient(0deg, #7A88FF, #7AFFAF);
 | 180deg | 表示元素的底边 | to bottom |
 | 270deg | 表示元素的左边 | to left |
 
-![角度解释图](./static/images/angle.png)
+![角度解释图](https://barnett617.github.io/apple_time/static/images/angle.png)
 
 如果仍然无法理解角度如何用，这里有一个[在线演示](https://codepen.io/thebabydino/full/qgoBL)
 
@@ -392,19 +404,15 @@ Thu Feb 01 2018 00:00:00 GMT+0800 (中国标准时间)
 2018 年 9 月 12 日上午 10 点（北京时间 9 月 13 日凌晨 1 点）
 ```
 
-## 字体
-
 ## 后记
 
 没想到最终呈现出来这么简单的一个页面竟涉及到这么多东西，而且每一个环节都可以细究到很多深层次的东西，这就是web的世界
-
-备用链接：barnett617.github.io/apple_time
 
 ## 补充
 
 使用vscode+搜狗输入法编辑本md文件上传至github后发现隐藏字符，形如：
 
-![出现隐藏字符情况再现图片](./static/images/char.png)
+![出现隐藏字符情况再现图片](https://barnett617.github.io/apple_time/static/images/char.png)
 
 查得[原因](https://www.zhihu.com/question/61638859)为
 
@@ -434,3 +442,5 @@ mac版的vscode中这个隐藏字符默认隐藏，可通过修改如下配置�
 [runoob-jquery](http://www.runoob.com/jquery/jquery-tutorial.html)
 
 [jianshu-如何优雅的选择字体](https://segmentfault.com/a/1190000006110417)
+
+[GitHub Ribbons](https://blog.github.com/2008-12-19-github-ribbons/)
