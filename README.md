@@ -5,7 +5,7 @@ A countdown clock
 
 ## 前言
 
-本网站基于github pages服务进行展示
+本网站基于github pages服务进行展示
 
 ## 过程
 
@@ -19,7 +19,7 @@ A countdown clock
 
 如何为网站添加图标：
 
-在\<head>标签中添加`<link rel="shortcut icon" href="favicon.ico">`，其会从项目根目录找favicon.ico文件
+在\<head>标签中添加`<link rel="shortcut icon" href="favicon.ico">`，其会从项目根目录找favicon.ico文件
 
 2. 主体布局
 
@@ -29,9 +29,9 @@ A countdown clock
 
 其次，为什么渐变不用PS做的图片，因为CSS3提供了gradients属性，通过CSS实现其实渐变是由浏览器生成的，可以减少下载的事件和宽带的使用
 
-既然渐变是浏览器生成的，就会涉及到不同浏览器的支持问题（Safari、Opera、Firefox等）
+既然渐变是浏览器生成的，就会涉及到不同浏览器的支持问题（Safari、Opera、Firefox等）
 
-另外，渐变的方式分为两种：`线性渐变（Linear Gradients）`和`径向渐变（Radial Gradients）`，顾名思义，线性渐变是从一个*起点*沿着一个*方向*从一种颜色渐变成另一种颜色，而径向渐变是从一个*起点*沿着一个*角度*渐变
+另外，渐变的方式分为两种：`线性渐变（Linear Gradients）`和`径向渐变（Radial Gradients）`，顾名思义，线性渐变是从一个*起点*沿着一个*方向*从一种颜色渐变成另一种颜色，而径向渐变是从一个*起点*沿着一个*角度*渐变
 
 线性：linear-gradient
 
@@ -65,7 +65,7 @@ background: linear-gradient(to bottom right, red , blue); /* 标准的语法 */
 
 > 注意：Internet Explorer 9 及之前的版本不支持渐变
 
-上面的是指定方向，也可以指定角度，如下：
+上面的是指定方向，也可以指定角度，如下：
 
 ```css
 background-image: linear-gradient(to top, #7A88FF, #7AFFAF);
@@ -101,7 +101,7 @@ background: -moz-linear-gradient(right,rgba(255,0,0,0),rgba(255,0,0,1)); /* Fire
 background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /* 标准的语法 */
 ```
 
-以上都是`线性渐变`
+以上都是`线性渐变`
 
 接下来是`径向渐变`
 
@@ -109,7 +109,7 @@ background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /* 标�
 radial-gradient(center, shape size, start-color, ..., last-color);
 ```
 
-> 若不指定前面的参数，只指明颜色，则按照默认情况对颜色进行*均匀*分布
+> 若不指定前面的参数，只指明颜色，则按照默认情况对颜色进行*均匀*分布
 
 > 可以根据需求添加任意多个颜色。额外添加的颜色叫色标（color stop）
 
@@ -130,7 +130,7 @@ linear-gradient(to right, #E94E65, #15A892 20%, #A89215 80%, #1574A8);
 
 > 使用多色渐变时，第一个颜色和最后一个颜色无需指定位置，因为浏览器会嘉定第一个颜色从0%的位置开始，最后一个颜色在100%的位置结束。除非想把第一个颜色或最后一个颜色的位置放在指定的位置开始，才需要专门定位。
 
-> 若想颜色不均匀分布，可手动对颜色增加权重
+> 若想颜色不均匀分布，可手动对颜色增加权重
 
 ```css
 background: -webkit-radial-gradient(red 5%, green 15%, blue 60%); /* Safari 5.1 - 6.0 */
@@ -161,6 +161,24 @@ background: -moz-repeating-radial-gradient(red, yellow 10%, green 15%);
 background: repeating-radial-gradient(red, yellow 10%, green 15%);
 ```
 
+## 补充
+
+使用vscode+搜狗输入法编辑本md文件上传至github后发现隐藏字符，形如：
+
+![](./images/char.png)
+
+查得[原因](https://www.zhihu.com/question/61638859)为
+
+> 在mac版vscode的中文输入法下，按下任意字母，出现中文候选后按删除键，删除完刚才输入的字母再按删除会出现这个控制字符
+
+mac版的vscode中这个隐藏字符默认隐藏，可通过修改如下配置打开，将文档中显示`BS`的退格符全局搜索并替换为空即可
+
+```
+//控制编辑器是否应呈现控制字符
+"editor.renderControlCharacters": true
+```
+
+原理解析：`BS`为ASCII码中的退格符的Unicode表示法(所有ASCII[控制字符](https://en.wikipedia.org/wiki/Control_character)都有一个图形外观
 
 参考链接：
 
