@@ -26,6 +26,8 @@ A countdown clock
 
 2. 主体布局
 
+### 背景
+
 如果要背景铺满屏幕，来一个渐变色要怎么做呢
 
 首先，为什么要用渐变，因为好看啊
@@ -162,6 +164,63 @@ background: -o-repeating-radial-gradient(red, yellow 10%, green 15%);
 background: -moz-repeating-radial-gradient(red, yellow 10%, green 15%);
 /* 标准的语法 */
 background: repeating-radial-gradient(red, yellow 10%, green 15%);
+```
+
+### 布局
+
+需要文字内容水平垂直居中，这就涉及到一个老生常谈的问题
+
+一开始随手一加，使用flex布局
+
+```html
+<body>
+  <div class="container">
+    <span>倒计时</span>
+  </div>
+</body>
+```
+
+```css
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+发现效果并不理想，只水平居中了，垂直方向并没有居中
+
+这里犯了一个flex布局的理解错误，对某个元素进行flex的设置，将影响其*子元素*，而不是其本身的布局，所以这里其实想container这一级水平垂直居中，那么`display: flex;`应该加在它的父级，即body的属性上
+
+而在body上加过多的样式不是理想的做法，我们是想以 container 为页面根级，所以在其上加flex布局，然后将其子元素达到居中的效果，那么要让 container 作为页面根级，则需要其铺满屏幕，这里需要做一些样式设计。
+
+首先，发现 container 并未铺满屏幕，即元素没有贴边浏览器，这是因为body有一个默认外边距，会随着不同的浏览器有着不同的行为，所以即使 container 高度和宽度100%贴着body，也无法占满屏幕，这就是为什么要对css作全局初始样式，重置其默认样式
+
+```css
+body {
+    display: block;
+    margin: 8px;
+}
+```
+
+需要在body上进行重置 
+
+```css
+button, p, pre {
+    margin: 0;
+}
+```
+
+另外，要让渐变色的背景铺满屏幕，这里采用了对html和body元素设置高度100%，从而达到自适应，背景总占满屏幕的效果
+
+```css
+html, body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-image: linear-gradient(45deg, #7A88FF, #7AFFAF);
+}
 ```
 
 ## 补充
