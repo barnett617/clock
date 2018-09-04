@@ -85,7 +85,7 @@ background-image:linear-gradient(0deg, #7A88FF, #7AFFAF);
 | 180deg | 表示元素的底边 | to bottom |
 | 270deg | 表示元素的左边 | to left |
 
-![](./images/angle.png)
+![角度解释图](./images/angle.png)
 
 如果仍然无法理解角度如何用，这里有一个[在线演示](https://codepen.io/thebabydino/full/qgoBL)
 
@@ -168,7 +168,7 @@ background: repeating-radial-gradient(red, yellow 10%, green 15%);
 
 使用vscode+搜狗输入法编辑本md文件上传至github后发现隐藏字符，形如：
 
-![](./images/char.png)
+![出现隐藏字符情况再现图片](./images/char.png)
 
 查得[原因](https://www.zhihu.com/question/61638859)为
 
