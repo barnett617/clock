@@ -21,6 +21,9 @@ A countdown clock
 
 在\<head>标签中添加`<link rel="shortcut icon" href="favicon.ico">`，其会从项目根目录找favicon.ico文件
 
+> `rel`表示将要引用的资源类型，`href`表示指向资源的URL，
+\<link rel="shortcut icon" href="favicon.ico">中    `rel="shortcut icon"`是一种固定写法，不写或错写会导致图标无法正常显示。
+
 2. 主体布局
 
 如果要背景铺满屏幕，来一个渐变色要怎么做呢
@@ -178,7 +181,7 @@ mac版的vscode中这个隐藏字符默认隐藏，可通过修改如下配置�
 "editor.renderControlCharacters": true
 ```
 
-原理解析：`BS`为ASCII码中的退格符的Unicode表示法(所有ASCII[控制字符](https://en.wikipedia.org/wiki/Control_character)都有一个图形外观
+原理解析：`BS`为ASCII码中的退格符的Unicode表示法，而所有ASCII[控制字符](https://en.wikipedia.org/wiki/Control_character)都有一个图形外观
 
 参考链接：
 
