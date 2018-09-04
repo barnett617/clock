@@ -14,9 +14,22 @@ function getNowTime () {
   var nowTime = new Date();
   var nowTimeValue = nowTime.valueOf();
   var timeGap = targetTimeValue - nowTimeValue;
+  var restDay = timeGap / (24 * 60 * 60 * 1000);
+  var restHour = (timeGap % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000);
+  var restMinute = ((timeGap % (24 * 60 * 60 * 1000)) % (60 * 60 * 1000)) / (60 * 1000);
+  var restSecond = (((timeGap % (24 * 60 * 60 * 1000)) % (60 * 60 * 1000)) % (60 * 1000)) / 1000;
+  var restTime = formatFloatTime(restDay) +
+  '天' + formatFloatTime(restHour) + 
+  '时' + formatFloatTime(restMinute) + 
+  '分' + formatFloatTime(restSecond) + '秒';
   var timeStr = formatDate(nowTime);
   var timeStr = '现在时间是： ' + timeStr;
+  $("#resttime").text(restTime);
   $("#countdown").text(timeStr);
+}
+
+function formatFloatTime (time) {
+  return time.toString().split('.')[0];
 }
 
 /**

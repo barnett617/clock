@@ -5,15 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>苹果发布会倒计时</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
-  <script src="./jquery-3.3.1.min.js"></script>
-  <script src="main.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="./static/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./static/css/index.css" />
+  <script src="./static/js/jquery-3.3.1.min.js"></script>
+  <script src="./static/js/main.js"></script>
   <link rel="shortcut icon" href="apple.svg">
 </head>
 <body>
   <div class="container">
-    <div class="countdown-title">倒计时</div>
-    <div id="countdown" class="countdown-content"></div>
+    <div class="countdown-title">发布会倒计时</div>
+    <div class="resttime-wrap">
+      <span>距离苹果发布会还有：</span>
+      <span id="resttime"></span>
+    </div>
+    <!-- <div id="countdown" class="countdown-content"></div> -->
   </div>
 </body>
 </html>
