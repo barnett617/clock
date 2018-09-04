@@ -392,6 +392,12 @@ Thu Feb 01 2018 00:00:00 GMT+0800 (中国标准时间)
 2018 年 9 月 12 日上午 10 点（北京时间 9 月 13 日凌晨 1 点）
 ```
 
+## 字体
+
+## 后记
+
+没想到最终呈现出来这么简单的一个页面竟涉及到这么多东西，而且每一个环节都可以细究到很多深层次的东西，这就是web的世界
+
 ## 补充
 
 使用vscode+搜狗输入法编辑本md文件上传至github后发现隐藏字符，形如：
@@ -424,3 +430,5 @@ mac版的vscode中这个隐藏字符默认隐藏，可通过修改如下配置�
 [segmentfault-JavaScript 时间与日期处理实战:你肯定被坑过](https://segmentfault.com/a/1190000007581722)
 
 [runoob-jquery](http://www.runoob.com/jquery/jquery-tutorial.html)
+
+[jianshu-如何优雅的选择字体](https://segmentfault.com/a/1190000006110417)
