@@ -413,10 +413,12 @@ mac版的vscode中这个隐藏字符默认隐藏，可通过修改如下配置�
 
 参考链接：
 
-[https://www.jianshu.com/p/58b340a037ea](https://www.jianshu.com/p/58b340a037ea)
+[jianshu-【CSS】渐变背景](https://www.jianshu.com/p/58b340a037ea)
 
-[http://www.runoob.com/css3/css3-gradients.html](http://www.runoob.com/css3/css3-gradients.html)
+[runoob-CSS3 渐变](http://www.runoob.com/css3/css3-gradients.html)
 
-[https://www.oschina.net/translate/introducing-the-javascript-internationalization-api](https://www.oschina.net/translate/introducing-the-javascript-internationalization-api)
+[oschina-介绍 JavaScript 国际化 API](https://www.oschina.net/translate/introducing-the-javascript-internationalization-api)
 
-[https://segmentfault.com/a/1190000007581722](https://segmentfault.com/a/1190000007581722)
+[JavaScript 标准参考教程（alpha）之Date](http://javascript.ruanyifeng.com/stdlib/date.html#toc4)
+
+[segmentfault-JavaScript 时间与日期处理实战:你肯定被坑过](https://segmentfault.com/a/1190000007581722)
