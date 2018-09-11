@@ -1,4 +1,15 @@
 .resttime-wrap {
   font-size: 36px;
-  padding: 10px;
+  line-height: 56px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.countdown-title {
+  font-size: 48px;
+  line-height: 77px;    
 }
