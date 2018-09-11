@@ -1,0 +1,1 @@
+px2rem -u 100 ./static/css/*.css -o ./static/css
