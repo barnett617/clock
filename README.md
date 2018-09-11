@@ -29,6 +29,8 @@ https://github.com/barnett617/apple_time
 
 - [svg转换ico在线工具](https://cloudconvert.com/svg-to-ico)
 
+- [xiconeditor](http://www.xiconeditor.com/)
+
 如何为网站添加图标：
 
 在\<head>标签中添加`<link rel="shortcut icon" href="favicon.ico">`，其会从项目根目录找favicon.ico文件
