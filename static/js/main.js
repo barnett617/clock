@@ -4,7 +4,10 @@ $(document).ready(function(){
 
 var timer = setInterval(function() {
   getNowTime();
-}, 1000)
+}, 1000);
+
+var willBeText = '距离苹果发布会还有：';
+var passedText = '苹果发布会已结束：';
 
 function getNowTime () {
   var targetTime = new Date(2018, 8, 13, 1);
@@ -14,6 +17,12 @@ function getNowTime () {
   var nowTime = new Date();
   var nowTimeValue = nowTime.valueOf();
   var timeGap = targetTimeValue - nowTimeValue;
+  if (timeGap < 0) {
+    timeGap = -timeGap;
+    $('#countdown-text').text(passedText);
+  } else {
+    $('#countdown-text').text(willBeText);
+  }
   var restDay = timeGap / (24 * 60 * 60 * 1000);
   var restHour = (timeGap % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000);
   var restMinute = ((timeGap % (24 * 60 * 60 * 1000)) % (60 * 60 * 1000)) / (60 * 1000);
@@ -25,7 +34,7 @@ function getNowTime () {
   var timeStr = formatDate(nowTime);
   var timeStr = '现在时间是： ' + timeStr;
   $("#resttime").text(restTime);
-  $("#countdown").text(timeStr);
+  // $("#countdown").text(timeStr);
 }
 
 function formatFloatTime (time) {
