@@ -1,0 +1,67 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>自定义时钟</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="./lib/jedate-6.0.2/skin/jedate.css">
+  <script src="./static/js/font.js"></script>
+  <script src="./static/js/jquery-3.3.1.min.js"></script>
+  <script src="./lib/jedate-6.0.2/jquery.jedate.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+    }
+    .container {
+      background-image: linear-gradient(45deg, #7A88FF, #7AFFAF);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+    label {
+      font-size: 38px;
+      padding: 20px;
+    }
+    .input-content {
+      display: flex;
+      align-items: center;
+    }
+    #targetTime {
+      font-size: 20px;
+      height: 35px;
+      width: 300px;
+    }
+    .btn {
+      font-size: 16px;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <label>输入目标时间</label>
+    <div class="input-content">
+      <input id="targetTime" placeholder="" type="text" />
+      <button id="btn" class="btn">Go</button>
+    </div>
+  </div>
+  <script>
+    var date;
+    $(function () {
+        $("#targetTime").jeDate({
+            format:"YYYY-MM-DD hh:mm:ss",
+            minDate:"2014-09-19 00:00:00",
+            okfun: function(obj) {
+              date = obj.val;
+            }
+        })
+    }); 
+    document.getElementById("btn").addEventListener("click", function() {
+      alert('成功设置目标时间：' + date)
+      window.location.href="index.html?date=" + date;
+    });
+  </script>
+</body>
+</html>

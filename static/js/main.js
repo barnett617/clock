@@ -1,6 +1,13 @@
 $(document).ready(function(){
   getNowTime();
+  bindBtnEvent();
 });
+
+function bindBtnEvent() {
+  $('#customize-btn').click(function() {
+    window.location.href = "customize.html";
+  });
+}
 
 var timer = setInterval(function() {
   getNowTime();
@@ -11,9 +18,16 @@ var passedText = '苹果发布会已结束：';
 
 function getNowTime () {
   var targetTime = new Date(2018, 8, 13, 1);
+  if (localStorage.getItem('targetTime')) {
+    targetTime = new Date(localStorage.getItem('targetTime'));
+  }
+  var userDate = location.search ? decodeURIComponent(location.search).split('?')[1].split('=')[1] : '';
+  if (userDate.toString().length > 0) {
+    targetTime = new Date(userDate.toString());
+    localStorage.setItem('targetTime', targetTime);
+  }
+  // var formatTargetTime = formatDate(targetTime, true);
   var targetTimeValue = targetTime.valueOf();
-  // console.log(targetTime);
-  var formatTargetTime = formatDate(targetTime, true);
   var nowTime = new Date();
   var nowTimeValue = nowTime.valueOf();
   var timeGap = targetTimeValue - nowTimeValue;
