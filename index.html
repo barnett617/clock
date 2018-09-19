@@ -15,7 +15,10 @@
     console.log('Hello world');
   </script>
   <!-- <script src="./static/js/font.js"></script> -->
-  <script src="./static/js/main.js"></script>
+  <script type="text/javascript">
+    document.write("<script type='text/javascript' src='./static/js/main.js?v="+ new Date().valueOf()+"'>");
+  </script>
+  <!-- <script src="./static/js/main.js?v=`${new Date().valueOf()`}"></script> -->
   <link rel="shortcut icon" href="apple.svg">
 </head>
 <body>
