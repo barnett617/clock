@@ -65,8 +65,13 @@
         })
     }); 
     document.getElementById("btn").addEventListener("click", function() {
-      alert('成功设置目标时间：' + date)
-      window.location.href="index.html?date=" + date;
+      if (date) {
+        alert('成功设置目标时间：' + date);
+        if (window.localStorage) {
+          localStorage.setItem('targetTime', date);
+        }
+        window.location.href="index.html?date=" + new Date(date).valueOf();
+      }
     });
   </script>
 </body>

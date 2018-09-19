@@ -14,8 +14,6 @@ function bindBtnEvent() {
 function init() {
   if (window.localStorage) {
     if (localStorage.getItem('targetTime')) {
-      // localStorage.removeItem('targetTime');
-      // targetTime = new Date(localStorage.getItem('targetTime'));
       targetTime = localStorage.getItem('targetTime');
       alert(targetTime);
     }
@@ -24,7 +22,7 @@ function init() {
     if (userDate.toString().length > 0) {
       targetTime = new Date(userDate.toString());
       alert(targetTime);
-      localStorage.setItem('targetTime', targetTime);
+      // localStorage.setItem('targetTime', targetTime);
     }
   } 
   if (!targetTime) {
