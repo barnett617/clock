@@ -66,11 +66,12 @@
     }); 
     document.getElementById("btn").addEventListener("click", function() {
       if (date) {
+        var dateValue = new Date(date).valueOf();
         alert('成功设置目标时间：' + date);
         if (window.localStorage) {
           localStorage.setItem('targetTime', date);
         }
-        window.location.href="index.html?date=" + new Date(date).valueOf();
+        window.location.href="index.html?date=" + dateValue;
       }
     });
   </script>
