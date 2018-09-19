@@ -13,9 +13,11 @@ function bindBtnEvent() {
 
 function init() {
   if (window.localStorage) {
+    // alert(localStorage);
     if (localStorage.getItem('targetTime')) {
       // localStorage.removeItem('targetTime');
-      targetTime = new Date(localStorage.getItem('targetTime'));
+      // targetTime = new Date(localStorage.getItem('targetTime'));
+      targetTime = localStorage.getItem('targetTime');
     }
     var userDate = location.search ? decodeURIComponent(location.search).split('?')[1].split('=')[1] : '';
     if (userDate.toString().length > 0) {
