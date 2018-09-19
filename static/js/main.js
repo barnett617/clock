@@ -20,6 +20,7 @@ function init() {
       alert(targetTime);
     }
     var userDate = location.search ? decodeURIComponent(location.search).split('?')[1].split('=')[1] : '';
+    alert(userDate);
     if (userDate.toString().length > 0) {
       targetTime = new Date(userDate.toString());
       alert(targetTime);
