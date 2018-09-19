@@ -15,14 +15,10 @@ function init() {
   if (window.localStorage) {
     if (localStorage.getItem('targetTime')) {
       targetTime = localStorage.getItem('targetTime');
-      alert(targetTime);
     }
     var userDate = location.search ? decodeURIComponent(location.search).split('?')[1].split('=')[1] : '';
-    alert(userDate);
     if (userDate.toString().length > 0) {
-      targetTime = new Date(userDate.toString());
-      alert(targetTime);
-      // localStorage.setItem('targetTime', targetTime);
+      targetTime = new Date(Number(userDate.toString()));
     }
   } 
   if (!targetTime) {
