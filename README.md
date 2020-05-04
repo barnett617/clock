@@ -5,15 +5,7 @@ A countdown clock
 
 ## 访问地址
 
-https://frontend.wang
-
-## 备用地址
-
-https://barnett617.github.io/apple_time
-
-## Fork me on github
-
-https://github.com/barnett617/apple_time
+https://barnett617.github.io/clock/
 
 ## 前言
 
